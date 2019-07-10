@@ -1,6 +1,6 @@
 # HowToBasic.Kubernetes
 <p align="center">
-  <img width="780" height="350" src="https://github.com/Simp1y/HowToBasic.-Kubernetes/blob/master/img/Kubernetes_New.png">
+  <img width="780" height="350" src="https://github.com/Simp1y/HowToBasic.-Kubernetes/blob/master/img/kubernetes_by_google.jpg">
 </p>
 
 ### How to install and configure
@@ -8,6 +8,16 @@
 - [Install kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-linux)
 ##### Run command "source ~/.bashrc".
 ##### export KUBE_EDITOR="/bin/nano" - set nano editor as default(if need).
+
+### Kubernetes concepts
+* Nodes: Node це машина в кластері Kubernetes.
+* Pods: Pod це група контейнерів із загальними розділами, що запускаються як єдине ціле.
+* Replication Controllers: гарантує, що певна кількість «реплік» pod'и будуть запущені в будь-який момент часу.
+* ReplicaSet: гарантує, що певна кількість «реплік» pod'и будуть запущені в будь-який момент часу.
+* Services: Сервіс в Kubernetes це абстракція яка визначає логічний об'єднаний набір pod і політику доступу до них.
+* Volumes: Volume (розділ) це директорія, можливо, з даними в ній, яка доступна в контейнері.
+* Labels: Label'и це пари ключ / значення які прикріплюються до об'єктів, наприклад pod'ам. Label'и можуть бути використані для створення і вибору наборів об'єктів.
+* Kubectl Command Line Interface: kubectl інтерфейс командного рядка для управління Kubernetes. 
 
 ## Commands:
 
