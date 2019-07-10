@@ -1,0 +1,20 @@
+apiVersion: apps/v1beta2
+kind: DaemonSet
+metadata:
+  name: ssd-monitor
+spec:
+  selector:
+    matchLabels:
+      app: ssd-monitor
+--------------------------------------
+  template:                          |
+    metadata:                        |
+      labels:                        |
+        app: ssd-monitor             |
+    spec:                            |
+      nodeSelector:                  |   - Шаблон модуля(пода) з якогось будуть створюватись репліки(копії).
+        disk: ssd                    |
+      containers:                    |
+      - name: main                   |
+        image: simplyman/ssd-monitor |
+--------------------------------------

@@ -43,7 +43,7 @@
 - kubectl label pod <pod-name> <key>=<label> - в ручну задати лейбл(мітку)
 - kubectl label pod <pod-name> app=<new-label-name> --overwrite - переписати існуючий лейбл в ключі app
 - kubectl get pod --show-labels - показати мітки подів
-  
+- kubectl get ds - показати демонсети(DaemonSet)  
 ### Replica controller (скоро буде визнано як застаріле і не буде підтримуватись)
 - kubectl get rc - показати всі запущенні контроллери реплік
 - kubectl edit rc <rc-name> - редагувати контроллер перлік
