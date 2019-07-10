@@ -1,0 +1,22 @@
+apiVersion: apps/v1beta2  - Версія АПІ
+
+kind: ReplicaSet        > тип ресурсу
+metadata:               >
+  name: kubia-second    > назва ресурсу(ReplicaSet)
+
+spec:                   > специфікація обєкту
+  replicas: 3           > к-ть копій(реплік) обєкту 
+  selector:           
+    matchLabels:       
+      app: kuber  > лейбл(селектор) поду з яким працює ReplicaSet
+
+------------------------------------
+  template:                        |   
+    metadata:                      |
+      labels:                      | 
+        app: kuber                 |  - Шаблон модуля(пода) з якогось будуть створюватись репліки(копії).
+    spec:                          |
+      containers:                  |
+      - name: kubia                |
+        image: simplyman/kubia     |
+------------------------------------
