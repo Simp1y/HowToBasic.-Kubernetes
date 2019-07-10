@@ -1,1 +1,1 @@
-# HowToBasic.-Kubernetes
+# HowToBasic.Kubernetes
