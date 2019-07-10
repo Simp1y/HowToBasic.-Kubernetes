@@ -20,3 +20,28 @@ spec:                   > специфікація обєкту
       - name: kubia                |
         image: simplyman/kubia     |
 ------------------------------------
+
+###***************ReplicaSet with matchexpressions***************###
+
+apiVersion: apps/v1beta2
+kind: ReplicaSet
+metadata:
+  name: kubia
+spec:
+  replicas: 3
+  selector:
+    matchExpressions:
+      - key: app                       - Цей селектор вимагає, щоб модуль містив мітку з ключем "app"
+        operator: In                   - In - значення мітки повинно збігатися з одним із зазначених значень values; NotIn - навпаки
+        values:                            
+         - kubia                       - Значення мітки повинно бути "kubia"
+-------------------------------------
+  template:                         |
+    metadata:                       |
+      labels:                       |
+        app: kubia                  |  - Шаблон модуля(пода) з якогось будуть створюватись репліки(копії).
+    spec:                           |
+      containers:                   |
+      - name: kubia                 |
+        image: simplyman/kubia      |
+-------------------------------------
