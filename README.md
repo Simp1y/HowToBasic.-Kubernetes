@@ -25,7 +25,7 @@
 - kubectl apply -f filename.yaml - внести зміни под/сервіс/і тд. якщо він вже існує
 - kubectl get pod (kubectl get pods -o wide - більше інфи про поди)- показати всі існуючі поди
 - kubectl get svc - показати всі існуючі сервіси
-- kubectl get nodes "node-name" - показати всі ноди
+- kubectl get nodes - показати всі ноди
 - kubectl describe node/pod/rc/etc <node/pod/rc-name> - детальний опис node(вузла)/pod'a
 - kubectl delete pod/svc <pod/svc-name> - видалити под/service
 - gcloud compute ssh <імя-вузла> - ввійти на ноду по ssh
@@ -48,7 +48,7 @@
 - kubectl get rc - показати всі запущенні контроллери реплік
 - kubectl edit rc <rc-name> - редагувати контроллер перлік
 - kubectl scale rc <rc-name> --replicas=10 - горизонтальний скейлінг вручну
-- kubectl delete rc <rc-name> --cascade=false - видалити rc залишивши при цьому всі поди
+- kubectl delete rc "rc-name" --cascade=false - видалити rc залишивши при цьому всі поди
 
 ### ReplicaSet (нова rc) - rs (НАБОРИ РЕПЛІК)
  
