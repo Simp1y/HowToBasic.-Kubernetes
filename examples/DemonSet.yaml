@@ -5,7 +5,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: ssd-monitor
+      app: ssd-monitor                   - Мітка ноди на якій буде піднято под
 --------------------------------------
   template:                          |
     metadata:                        |
