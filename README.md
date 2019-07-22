@@ -25,7 +25,7 @@
 - kubectl apply -f filename.yaml - внести зміни под/сервіс/і тд. якщо він вже існує
 - kubectl get pod (kubectl get pods -o wide - більше інфи про поди)- показати всі існуючі поди
 - kubectl get svc - показати всі існуючі сервіси
-- kubectl get nodes <node-name> - показати всі ноди
+- kubectl get nodes "node-name" - показати всі ноди
 - kubectl describe node/pod/rc/etc <node/pod/rc-name> - детальний опис node(вузла)/pod'a
 - kubectl delete pod/svc <pod/svc-name> - видалити под/service
 - gcloud compute ssh <імя-вузла> - ввійти на ноду по ssh
@@ -40,7 +40,7 @@
 - kubectl create -f <pod/node/etc>.yaml -n <custom-namespace> - створити ресурс в конкретному неймспейсі
 - kubectl delete all --all - видалити все окрім стандартних сервісів 
 - kubectl logs <pod-name> --previous - логи з попереднього контейнера(якій наприклад аварійно припинив роботу)
-- kubectl label pod <pod-name> <key>=<label> - в ручну задати лейбл(мітку)
+- kubectl label pod <pod-name> key=<label> - в ручну задати лейбл(мітку)
 - kubectl label pod <pod-name> app=<new-label-name> --overwrite - переписати існуючий лейбл в ключі app
 - kubectl get pod --show-labels - показати мітки подів
 - kubectl get ds - показати демонсети(DaemonSet)  
