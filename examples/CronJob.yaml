@@ -4,14 +4,16 @@ metadata:
   name: batch-job-every-fifteen-minutes
 spec:
   schedule: "0,15,30,45 * * * *"              - графік виконання
-  jobTemplate:
-    spec:
-      template:
-        metadata:
-          labels:
-            app: periodic-batch-job
-        spec:
-          restartPolicy: OnFailure
-          containers:
-          - name: main
-            image: simplyman/batch-job
+-----------------------------------------
+  jobTemplate:                          |
+    spec:                               |
+      template:                         |
+        metadata:                       |
+          labels:                       |
+            app: periodic-batch-job     |     - шаблон запущених кронджоб
+        spec:                           |
+          restartPolicy: OnFailure      |
+          containers:                   |     
+          - name: main                  |
+            image: simplyman/batch-job  |
+-----------------------------------------
