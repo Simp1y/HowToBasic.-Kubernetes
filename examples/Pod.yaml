@@ -9,5 +9,9 @@ spec:                          - специфікація
   - image: simplyman/kubia     - образ контейнера
     name: kubia-kubia          - назва контейнера
     ports:
-    - containerPort: 8080      - порт
+    - name: custom_name
+      containerPort: 8080      - порт
       protocol: TCP            - протокол
+    - name: https
+      containerPort: 443
+      protocol: TCP

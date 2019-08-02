@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: simply
+spec:
+  sessionAffinity: ClientIP   - змушує напрявляти запити до одного і тогож модуля з конкретного ІР  
+  ports:
+    name: http
+  - port: 80                  - порт на якому служба буде доступна 
+    targetPort: 8080          - порт контейнера куди служба буде перенепрявляти
+  – name: https
+    port: 443
+    targetPort: 8443
+
+  selector:
+    app: simply               - всі модулі(поди) з міткою simply будуть частиною служби

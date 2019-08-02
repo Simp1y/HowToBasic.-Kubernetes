@@ -43,6 +43,9 @@
 - kubectl label pod "pod-name" key="label" - в ручну задати лейбл(мітку)
 - kubectl label pod "pod-name" app="new-label-name" --overwrite - переписати існуючий лейбл в ключі app
 - kubectl get pod --show-labels - показати мітки подів
+- kubectl exec "pod-name" --(подвійне тире не потрібно якщо команда немає знаків тире) "command" - виконати команду на поді(модулі)
+- kubectl exec -it "pod-name" bash - запустити термінал на поді
+- kubectl get endpoints "svc-name" - показати кінцеві точки сервісу 
 ### DemonSet -  контролює створення модулів(подів) (по 1шт) на кожній ноді або в залежності від мітки(якщо є необхідна мітка то створююєтся модуль) 
 - kubectl get ds - показати демонсети(DaemonSet)  
 ### Replica controller (скоро буде визнано як застаріле і не буде підтримуватись) - контролює к-ть реплік(модулів)
@@ -56,3 +59,7 @@
 ### Jobs - одноразові модулі(конейнери), час виконання 2 хв. Cronjobs - аналогічно unix
 - kubectl get jobs - показати всі джоби
 - kubectl get cj - показати всі кронджоби
+### GCP Firewall
+- gcloud compute firewall-rules create "rule-name" --allow=tcp:30123 - встворити фаервол правило яке відкриє 30123 порт на зовні
+### TLS(SSL) certificates for Ingress, etc.
+
