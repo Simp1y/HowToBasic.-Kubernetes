@@ -62,4 +62,8 @@
 ### GCP Firewall
 - gcloud compute firewall-rules create "rule-name" --allow=tcp:30123 - встворити фаервол правило яке відкриє 30123 порт на зовні
 ### TLS(SSL) certificates for Ingress, etc.
-
+- openssl genrsa -out tls.key 2048 - згенерувати закритий ключ
+- openssl req -new -x509 -key tls.key -out tls.cert -days 360 -subj - згенерувати сертифікат
+- kubectl create secret tls tls-secret --cert=tls.cert --key=tls.key - створюєм файл секрет з двох файлі для ssl зєднання
+- kubectl certificate approve "name of the CSR" - підписати сертифікат за допомогою CertificateSigningRequest
+- 
